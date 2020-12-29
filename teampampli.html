@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://teampamplinas.indie.af/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- https://github.com/ftlabs/fastclick#when-it-isnt-needed -->
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+		<script type="text/javascript">
+
+			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+				var msViewportStyle = document.createElement("style");
+				msViewportStyle.appendChild(
+					document.createTextNode(
+						"@-ms-viewport{width:auto!important}"
+					)
+				);
+				document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+			}
+
+		</script>
+
+		<title>ToBIX Games</title>
+	<link rel="shortcut icon" href="https://s.gjcdn.net/sites-io/favicon.png"><link href="./teampampli_files/app.225481.css" rel="stylesheet"><script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script><meta name="shimejiBrowserExtensionId" content="gohjpllcolmccldfdggmamodembldgpc" data-version="1.6.5"><style type="text/css">
+@charset "UTF-8";
+/*!
+ * jQuery contextMenu - Plugin for simple contextMenu handling
+ *
+ * Version: v2.5.0
+ *
+ * Authors: Björn Brala (SWIS.nl), Rodney Rehm, Addy Osmani (patches for FF)
+ * Web: http://swisnl.github.io/jQuery-contextMenu/
+ *
+ * Copyright (c) 2011-2017 SWIS BV and contributors
+ *
+ * Licensed under
+ *   MIT License http://www.opensource.org/licenses/mit-license
+ *
+ * Date: 2017-05-25T11:30:28.663Z
+ */
+@-webkit-keyframes cm-spin {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(359deg);
+            transform: translateY(-50%) rotate(359deg);
+  }
+}
+@-o-keyframes cm-spin {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+         -o-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(359deg);
+         -o-transform: translateY(-50%) rotate(359deg);
+            transform: translateY(-50%) rotate(359deg);
+  }
+}
+@keyframes cm-spin {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+         -o-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(359deg);
+         -o-transform: translateY(-50%) rotate(359deg);
+            transform: translateY(-50%) rotate(359deg);
+  }
+}
+
+@font-face {
+  font-family: "context-menu-icons";
+  font-style: normal;
+  font-weight: normal;
+
+  src: url("font/context-menu-icons.eot?4yg1f");
+  src: url("font/context-menu-icons.eot?4yg1f#iefix") format("embedded-opentype"), url("font/context-menu-icons.woff2?4yg1f") format("woff2"), url("font/context-menu-icons.woff?4yg1f") format("woff"), url("font/context-menu-icons.ttf?4yg1f") format("truetype");
+}
+
+.context-menu-icon-add:before {
+  content: "EA01";
+}
+
+.context-menu-icon-copy:before {
+  content: "EA02";
+}
+
+.context-menu-icon-cut:before {
+  content: "EA03";
+}
+
+.context-menu-icon-delete:before {
+  content: "EA04";
+}
+
+.context-menu-icon-edit:before {
+  content: "EA05";
+}
+
+.context-menu-icon-loading:before {
+  content: "EA06";
+}
+
+.context-menu-icon-paste:before {
+  content: "EA07";
+}
+
+.context-menu-icon-quit:before {
+  content: "EA08";
+}
+
+.context-menu-icon::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2em;
+  font-family: "context-menu-icons";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  color: #2980b9;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.context-menu-icon.context-menu-hover:before {
+  color: #fff;
+}
+
+.context-menu-icon.context-menu-disabled::before {
+  color: #bbb;
+}
+
+.context-menu-icon.context-menu-icon-loading:before {
+  -webkit-animation: cm-spin 2s infinite;
+       -o-animation: cm-spin 2s infinite;
+          animation: cm-spin 2s infinite;
+}
+
+.context-menu-icon.context-menu-icon--fa {
+  display: list-item;
+  font-family: inherit;
+}
+.context-menu-icon.context-menu-icon--fa::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2em;
+  font-family: FontAwesome;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  color: #2980b9;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.context-menu-icon.context-menu-icon--fa.context-menu-hover:before {
+  color: #fff;
+}
+.context-menu-icon.context-menu-icon--fa.context-menu-disabled::before {
+  color: #bbb;
+}
+
+.context-menu-list {
+  position: absolute;
+  display: inline-block;
+  min-width: 13em;
+  max-width: 26em;
+  padding: .25em 0;
+  margin: .3em;
+  font-family: inherit;
+  font-size: inherit;
+  list-style-type: none;
+  background: #fff;
+  border: 1px solid #bebebe;
+  border-radius: .2em;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.context-menu-item {
+  position: relative;
+  padding: .2em 2em;
+  color: #2f2f2f;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #fff;
+}
+
+.context-menu-separator {
+  padding: 0;
+  margin: .35em 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.context-menu-item > label > input,
+.context-menu-item > label > textarea {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+.context-menu-item.context-menu-hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: #2980b9;
+}
+
+.context-menu-item.context-menu-disabled {
+  color: #bbb;
+  cursor: default;
+  background-color: #fff;
+}
+
+.context-menu-input.context-menu-hover {
+  color: #2f2f2f;
+  cursor: default;
+}
+
+.context-menu-submenu:after {
+  position: absolute;
+  top: 50%;
+  right: .5em;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  content: '';
+  border-color: transparent transparent transparent #2f2f2f;
+  border-style: solid;
+  border-width: .25em 0 .25em .25em;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/**
+ * Inputs
+ */
+.context-menu-item.context-menu-input {
+  padding: .3em .6em;
+}
+
+/* vertically align inside labels */
+.context-menu-input > label > * {
+  vertical-align: top;
+}
+
+/* position checkboxes and radios as icons */
+.context-menu-input > label > input[type="checkbox"],
+.context-menu-input > label > input[type="radio"] {
+  position: relative;
+  top: .12em;
+  margin-right: .4em;
+}
+
+.context-menu-input > label {
+  margin: 0;
+}
+
+.context-menu-input > label,
+.context-menu-input > label > input[type="text"],
+.context-menu-input > label > textarea,
+.context-menu-input > label > select {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.context-menu-input > label > textarea {
+  height: 7em;
+}
+
+.context-menu-item > .context-menu-list {
+  top: .3em;
+  /* re-positioned by js */
+  right: -.3em;
+  display: none;
+}
+
+.context-menu-item.context-menu-visible > .context-menu-list {
+  display: block;
+}
+
+.context-menu-accesskey {
+  text-decoration: underline;
+}
+</style><style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.context-menu-list {
+  font-family: 'Lato', sans-serif !important;
+  font-size: 14px;
+  text-align: left;
+  font-weight: normal;
+  width: 200px;
+}
+.context-menu-item {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+.contextmenu-item-custom.contextmenu-item-custom__accent:not(:hover) {
+  background-color: #f8ffeb;
+}
+.contextmenu-item-custom.contextmenu-item-custom__success:not(:hover) {
+  background-color: #eeffcd;
+}
+</style><meta name="description" content="Somos un grupo de desarrolladores de videojuegos indie, nuestro objetivo es hacer que la gente se divierta con nuestros juegos como nosotros nos divertimos creandolos!"><script type="text/javascript" charset="utf-8" async="" src="./teampampli_files/app.ThemeRedux.8bda7d.js.download"></script><style type="text/css">.clearfix:after,.clearfix:before{content:' ';display:table}.clearfix:after{clear:both}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}body.theme-redux{background-color:#000;padding:30px}body.theme-redux .content{font-family:'Comic Sans MS','Comic Sans',cursive;color:#ff0;font-size:16px;text-align:center}body.theme-redux .content h1,body.theme-redux .content h2,body.theme-redux .content h3,body.theme-redux .content h4,body.theme-redux .content h5,body.theme-redux .content h6,body.theme-redux .content p{margin-bottom:1.5rem}body.theme-redux .content h1,body.theme-redux .content h2,body.theme-redux .content h3,body.theme-redux .content h4,body.theme-redux .content h5,body.theme-redux .content h6{color:red;font-family:'Comic Sans MS','Comic Sans',Arial,Helvetica,sans-serif}body.theme-redux .content a,body.theme-redux .content a:hover{color:#00f}body.theme-redux .content hr{border-bottom:5px ridge}body.theme-redux .content blockquote{border:0}body.theme-redux .content img{display:inline-block;width:100%;max-width:1000px;height:auto;vertical-align:top}body.theme-redux .content table{width:100%;margin-bottom:21px;border:5px ridge}body.theme-redux .content td,body.theme-redux .content th{text-align:center}body.theme-redux .content td,body.theme-redux .content th{padding:8px;line-height:1.428571429;vertical-align:middle;border-top:5px ridge;border-right:5px ridge}body.theme-redux .video-embed,body.theme-redux .widget-compiler-widget-soundcloud{max-width:900px;margin:0 auto}body.theme-redux .media-bar{background-color:transparent}</style></head>
+
+	<body class="theme-redux">
+		<div data-v-6c22ab23=""><div data-v-6c22ab23="" id="theme-1"><style>
+			:root {
+				--theme-white: #fff;
+				--theme-darkest: #141015;
+				--theme-darker: #271f29;
+				--theme-dark: #2f2731;
+				--theme-gray: #3b333e;
+				--theme-gray-subtle: #48414b;
+				--theme-light: #807883;
+				--theme-lighter: #d0c8d2;
+				--theme-lightest: #f0e9f3;
+				--theme-black: #000;
+
+				--theme-black-trans: rgba(0,0,0,0);
+				--theme-darkest-trans: rgba(20,16,21,0);
+				--theme-darker-trans: rgba(39,31,41,0);
+				--theme-dark-trans: rgba(47,39,49,0);
+				--theme-gray-trans: rgba(59,51,62,0);
+				--theme-gray-subtle-trans: rgba(72,65,75,0);
+				--theme-light-trans: rgba(128,120,131,0);
+				--theme-lighter-trans: rgba(208,200,210,0);
+				--theme-lightest-trans: rgba(240,233,243,0);
+				--theme-white-trans: rgba(255,255,255,0);
+
+				--theme-highlight: #46ff76;
+				--theme-backlight: #512762;
+				--theme-notice: #ff3b3b;
+				--theme-highlight-fg: #000;
+				--theme-notice-fg: #000;
+				--theme-bi-bg: #512762;
+				--theme-bi-fg: #46ff76;
+				--theme-bg: var(--theme-white);
+				--theme-bg-trans: var(--theme-white-trans);
+				--theme-bg-offset-base: var(--theme-lightest);
+				--theme-bg-offset-trans-base: var(--theme-lightest-trans);
+				--theme-bg-offset: var(--theme-bg-offset-base);
+				--theme-bg-offset-trans: var(--theme-bg-offset-trans-base);
+				--theme-bg-subtle: var(--theme-lighter);
+				--theme-fg: var(--theme-dark);
+				--theme-fg-muted: var(--theme-light);
+				--theme-link: var(--theme-backlight);
+				--theme-link-hover: var(--theme-black);
+
+				--dark-theme-highlight: #46ff76;
+				--dark-theme-backlight: #512762;
+				--dark-theme-notice: #ff3b3b;
+				--dark-theme-bi-bg: #46ff76;
+				--dark-theme-bi-fg: #000;
+				--dark-theme-bg: var(--theme-dark);
+				--dark-theme-bg-trans: var(--theme-dark-trans);
+				--dark-theme-bg-offset-base: var(--theme-gray);
+				--dark-theme-bg-offset-trans-base: var(--theme-gray-trans);
+				--dark-theme-bg-offset: var(--dark-theme-bg-offset-base);
+				--dark-theme-bg-offset-trans: var(--dark-theme-bg-offset-trans-base);
+				--dark-theme-bg-subtle: var(--theme-gray-subtle);
+				--dark-theme-fg: var(--theme-lightest);
+				--dark-theme-fg-muted: var(--theme-light);
+				--dark-theme-link: #46ff76;
+				--dark-theme-link-hover: var(--theme-white);
+			}
+		</style></div> <style data-v-6c22ab23="">@import url(//fonts.googleapis.com/css?family=Source+Code+Pro);.content { font-family: 'Source Code Pro' !important }html,body { background-position: left !important } </style> <div data-v-ab5524d8="" data-v-6c22ab23="" id="theme-redux"><div data-v-ab5524d8="" class="widget-compiler"><div class="content">
+
+    <p style="text-align:left;color:#FFFFFF;font-family:&#39;Lucida Console&#39;, serif;font-size:16px;">
+Microsuave Ventanas [Version 67.5.48484]
+<br>  2021 Manaos Corporation. Todos los derechos y izquierdos reservados viteh. 
+<br><br>
+        C:/Users/teampamplinas&gt;teasers
+
+    
+</p><p><br><br><img src="./teampampli_files/htjgd-1-wqazkcuj.png" alt=""><br><br><br><img src="./teampampli_files/e-m98anevy-kkdaavjf.png" alt=""><br><br><br><img src="./teampampli_files/faibnaitsnmff---copy-2gc2wtt6.png" alt=""><br><br><br><img src="./teampampli_files/die-7wh95pts.png" alt=""></p></div></div></div></div>
+
+		<script async="" src="./teampampli_files/analytics.js.download"></script>
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('require', 'linkid', 'linkid.js');
+		</script>
+	<script type="text/javascript" src="./teampampli_files/app.manifest.03daea.js.download"></script><script type="text/javascript" src="./teampampli_files/app.vendor.70d1f5.js.download"></script><script type="text/javascript" src="./teampampli_files/app.app.b7c34d.js.download"></script>
+
+
+<div id="shimai-world" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 2147483647; pointer-events: none; background: transparent;"></div></body></html>
